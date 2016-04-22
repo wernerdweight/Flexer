@@ -1,14 +1,14 @@
 {
-  "name": "flexie",
+  "name": "flexer",
   "version": "0.1.0",
-  "description": "An advanced flexbox based grid system",
+  "description": "An advanced flexbox-based grid system",
   "keywords": [
     "flex", "fexbox", "grid"
   ],
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/WernerDweight/Flexie.git"
+    "url": "https://github.com/WernerDweight/Flexer.git"
   },
   "author": "Werner Dweight",
   "license": "MIT",
