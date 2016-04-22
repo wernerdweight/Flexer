@@ -1,0 +1,87 @@
+///////////////////////////////////////////////////////////////////////////////////
+////            WD GRID SYSTEM
+///////////////////////////////////////////////////////////////////////////////////
+
+/// row element
+.wd-r
+    width: 100%
+    *zoom: 1
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin: 1rem 0
+    +box-sizing(border-box)
+    &.wd-r-fixed
+        width: $wdFlexiePhoneWidth
+        margin: 0 auto
+        +responsive(phablet)
+            width: $wdFlexiePhabletWidth
+        +responsive(tablet)
+            width: $wdFlexieTabletWidth
+        +responsive(desktop)
+            width: $wdFlexieFullWidth
+    &.wd-r-expanded
+        +responsive(desktop)
+            width: $wdFlexieExpandedWidth
+    /// column vertical align
+    &.wd-r-ai-s
+        align-items: flex-start
+    &.wd-r-ai-e
+        align-items: flex-end
+    &.wd-r-ai-c
+        align-items: center
+    &.wd-r-ai-b
+        align-items: baseline
+    /// column's content vertical align
+    &.wd-r-ac-sa
+        & > *
+            justify-content: space-around
+    &.wd-r-ac-sb
+        & > *
+            justify-content: space-between
+    &.wd-r-ac-c
+        & > *
+            justify-content: center
+    &.wd-r-ac-e
+        & > *
+            justify-content: flex-end
+
+    /// column element
+    & > *
+        display: flex
+        flex-direction: column
+        +box-sizing(border-box)
+
+    @if $wdFlexieUseGrid == true
+        /// classic column widths
+        @for $i from 1 through $wdFlexieTotalColumns
+            & > .wd-c-#{$i}
+                +column-width($i)
+        @if $wdFlexieUseGridResponsive == true
+            @each $scope, $name in $wdFlexieScopes
+                +responsive($scope)
+                    @for $i from 1 through $wdFlexieTotalColumns
+                        & > .#{$name}-c-#{$i}
+                            +column-width($i)
+
+    @if $wdFlexieUseGridNoMargin == true
+        /// no-margin column widths
+        &.wd-r-nm
+            margin: 0
+            @for $i from 1 through $wdFlexieTotalColumns
+                & > .wd-c-#{$i}
+                    +column-width($i,0rem,$wdFlexieMaxWidth/$wdFlexieTotalColumns)
+            @if $wdFlexieUseGridResponsive == true
+                @each $scope, $name in $wdFlexieScopes
+                    +responsive($scope)
+                        @for $i from 1 through $wdFlexieTotalColumns
+                            & > .#{$name}-c-#{$i}
+                                +column-width($i,0rem,$wdFlexieMaxWidth/$wdFlexieTotalColumns)
+
+@if $wdFlexieUseGridOneRow == true
+    /// responsive layout
+    +generate-responsive-layout($wdFlexieTotalColumns,'wd')
+    @each $scope, $name in $wdFlexieScopes
+        +responsive($scope)
+            +generate-responsive-layout($wdFlexieTotalColumns,$name)

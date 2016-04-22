@@ -1,0 +1,13 @@
+///////////////////////////////////////////////////////////////////////////////////
+////            WD POSITIONING
+///////////////////////////////////////////////////////////////////////////////////
+
+/// default margins and paddings (non-responsive)
+@if $wdFlexieUseIndentation == true
+	+margins-and-paddings('wd')
+
+/// responsive margins and paddings
+@if $wdFlexieUseIndentationResponsive == true
+	@each $scope, $name in $wdFlexieScopes
+		+responsive($scope)
+			+margins-and-paddings($name)

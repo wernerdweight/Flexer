@@ -1,0 +1,56 @@
+.example p {
+	text-align: center;
+	text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+	margin: 0;
+}
+.example img {
+	max-width: 100%;
+}
+
+.example > *:nth-child(12n + 1) {
+	background-color: #039AFB
+}
+.example > *:nth-child(12n + 2) {
+	background-color: #FE4D2D
+}
+.example > *:nth-child(12n + 3) {
+	background-color: #039A1E
+}
+.example > *:nth-child(12n + 4) {
+	background-color: #FEFF00
+}
+.example > *:nth-child(12n + 5) {
+	background-color: #00FAFF
+}
+.example > *:nth-child(12n + 6) {
+	background-color: #FF48CB
+}
+.example > *:nth-child(12n + 7) {
+	background-color: #FF6000
+}
+.example > *:nth-child(12n + 8) {
+	background-color: #FF0043
+}
+.example > *:nth-child(12n + 9) {
+	background-color: #9D00FF
+}
+.example > *:nth-child(12n + 10) {
+	background-color: #00B2AC
+}
+.example > *:nth-child(12n + 11) {
+	background-color: #74DB00
+}
+.example > *:nth-child(12n + 12) {
+	background-color: #000000
+}
+
+html {
+	font-size 62.5%;
+}
+
+body {
+	background-color: #393F5F;
+	color: white;
+	font-family: Verdana, sans-serif;
+	font-size: 1.6rem;
+}
