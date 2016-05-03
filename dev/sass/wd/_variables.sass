@@ -1,19 +1,19 @@
 /// switches (plus additional size if minified)
 /// use basic grid ~ +3 kB
 $wdFlexieUseGrid: true !default
-/// use no-margin grid ~ +2 kB / +15 kB (if used together with one-row grid)
+/// use no-margin grid ~ +2 kB / +9 kB (if used together with one-row grid)
 $wdFlexieUseGridNoMargin: true !default
-/// use responsive grid ~ +9 kB
+/// use responsive grid ~ +6 kB
 $wdFlexieUseGridResponsive: true !default
-/// use one-row grid ~ +15 kB
+/// use one-row grid ~ +12 kB
 $wdFlexieUseGridOneRow: true !default
-/// use indentation ~ +4 kB
+/// use indentation ~ +3 kB
 $wdFlexieUseIndentation: true !default
-/// use responsive indentation ~ 10 kB
+/// use responsive indentation ~ 7 kB
 $wdFlexieUseIndentationResponsive: true !default
 
 /// scope map
-$wdFlexieScopes: ('phablet': 'p', 'tablet': 't', 'desktop': 'd')
+$wdFlexieScopes: ('tablet': 't', 'desktop': 'd')
 
 /// side map
 $wdFlexiePositioningIndividualSides: ('t': 'top', 'b': 'bottom', 'l': 'left', 'r': 'right') !default
@@ -24,13 +24,11 @@ $wdFlexiePositioningValues: ('n4': -4, 'n3': -3, 'n2': -2, 'n1': -1, '0': 0, '1'
 /// breakpoints
 $wdFlexieExpandedWidth: 1280px !default
 $wdFlexieFullWidth: 1180px !default
-$wdFlexieTabletWidth: 920px !default
-$wdFlexiePhabletWidth: 90% !default
+$wdFlexieTabletWidth: 748px !default
 $wdFlexiePhoneWidth: 95% !default
 
 $wdFlexieResponsiveWidthDesktop: $wdFlexieFullWidth + 20px !default
 $wdFlexieResponsiveWidthTablet: $wdFlexieTabletWidth + 20px !default
-$wdFlexieResponsiveWidthPhablet: 640px !default
 
 /// grid
 $wdFlexieTotalColumns: 12 !default
