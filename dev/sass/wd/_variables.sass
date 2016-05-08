@@ -1,37 +1,37 @@
 /// switches (plus additional size if minified)
 /// use basic grid ~ +3 kB
-$wdFlexieUseGrid: true !default
+$wdFlexerUseGrid: true !default
 /// use no-margin grid ~ +2 kB / +9 kB (if used together with one-row grid)
-$wdFlexieUseGridNoMargin: true !default
+$wdFlexerUseGridNoMargin: true !default
 /// use responsive grid ~ +6 kB
-$wdFlexieUseGridResponsive: true !default
+$wdFlexerUseGridResponsive: true !default
 /// use one-row grid ~ +12 kB
-$wdFlexieUseGridOneRow: true !default
+$wdFlexerUseGridOneRow: true !default
 /// use indentation ~ +3 kB
-$wdFlexieUseIndentation: true !default
+$wdFlexerUseIndentation: true !default
 /// use responsive indentation ~ 7 kB
-$wdFlexieUseIndentationResponsive: true !default
+$wdFlexerUseIndentationResponsive: true !default
 
 /// scope map
-$wdFlexieScopes: ('tablet': 't', 'desktop': 'd')
+$wdFlexerScopes: ('tablet': 't', 'desktop': 'd')
 
 /// side map
-$wdFlexiePositioningIndividualSides: ('t': 'top', 'b': 'bottom', 'l': 'left', 'r': 'right') !default
-$wdFlexiePositioningBilateralSides: ('tb', 'top', 'bottom'), ('lr', 'left', 'right') !default
-$wdFlexiePositioningProperties: ('m': 'margin', 'p': 'padding') !default
-$wdFlexiePositioningValues: ('n4': -4, 'n3': -3, 'n2': -2, 'n1': -1, '0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6) !default
+$wdFlexerPositioningIndividualSides: ('t': 'top', 'b': 'bottom', 'l': 'left', 'r': 'right') !default
+$wdFlexerPositioningBilateralSides: ('tb', 'top', 'bottom'), ('lr', 'left', 'right') !default
+$wdFlexerPositioningProperties: ('m': 'margin', 'p': 'padding') !default
+$wdFlexerPositioningValues: ('n4': -4, 'n3': -3, 'n2': -2, 'n1': -1, '0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6) !default
 
 /// breakpoints
-$wdFlexieExpandedWidth: 1280px !default
-$wdFlexieFullWidth: 1180px !default
-$wdFlexieTabletWidth: 748px !default
-$wdFlexiePhoneWidth: 95% !default
+$wdFlexerExpandedWidth: 1280px !default
+$wdFlexerFullWidth: 1180px !default
+$wdFlexerTabletWidth: 748px !default
+$wdFlexerPhoneWidth: 95% !default
 
-$wdFlexieResponsiveWidthDesktop: $wdFlexieFullWidth + 20px !default
-$wdFlexieResponsiveWidthTablet: $wdFlexieTabletWidth + 20px !default
+$wdFlexerResponsiveWidthDesktop: $wdFlexerFullWidth + 20px !default
+$wdFlexerResponsiveWidthTablet: $wdFlexerTabletWidth + 20px !default
 
 /// grid
-$wdFlexieTotalColumns: 12 !default
-$wdFlexieMarginColumn: 1rem !default
-$wdFlexieMaxWidth: 100% !default
-$wdFlexieUnit: '( ((#{$wdFlexieMaxWidth} - ((#{$wdFlexieTotalColumns - 1})*#{$wdFlexieMarginColumn})) / #{$wdFlexieTotalColumns}) )' !default
+$wdFlexerTotalColumns: 12 !default
+$wdFlexerMarginColumn: 1rem !default
+$wdFlexerMaxWidth: 100% !default
+$wdFlexerUnit: '( ((#{$wdFlexerMaxWidth} - ((#{$wdFlexerTotalColumns - 1})*#{$wdFlexerMarginColumn})) / #{$wdFlexerTotalColumns}) )' !default

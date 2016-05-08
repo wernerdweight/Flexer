@@ -1,11 +1,11 @@
 /// fluid width formula mixin
-=column-width($n,$m:$wdFlexieMarginColumn,$u:$wdFlexieUnit,$c:$wdFlexieTotalColumns)
+=column-width($n,$m:$wdFlexerMarginColumn,$u:$wdFlexerUnit,$c:$wdFlexerTotalColumns)
     flex-basis: calc( (#{$n} * #{$u}) + (#{$n - 1} * #{$m}) )
 
 =baseColumn
-    margin-left: $wdFlexieMarginColumn
+    margin-left: $wdFlexerMarginColumn
     &:nth-child(n)
-        margin-left: $wdFlexieMarginColumn
+        margin-left: $wdFlexerMarginColumn
     &:first-child
         margin-left: 0
 
@@ -14,27 +14,27 @@
     @for $i from $start through $cols
         .#{$scope}-#{$i}
             & > *
-                +column-width($wdFlexieTotalColumns/$i)
+                +column-width($wdFlexerTotalColumns/$i)
                 margin-bottom: 1rem
-                margin-left: $wdFlexieMarginColumn
+                margin-left: $wdFlexerMarginColumn
                 &:nth-child(#{$i}n + 1)
                     margin-left: 0
-            @if $wdFlexieUseGridNoMargin == true
+            @if $wdFlexerUseGridNoMargin == true
                 &.r-nm > *
-                    +column-width($wdFlexieTotalColumns/$i,0rem,$wdFlexieMaxWidth/$wdFlexieTotalColumns)
+                    +column-width($wdFlexerTotalColumns/$i,0rem,$wdFlexerMaxWidth/$wdFlexerTotalColumns)
                     margin-left: 0
                     margin-bottom: 0
 
 /// media query generator, usual version (minimal width)
 =responsive($scope)
     @if $scope == desktop
-        @media only screen and (min-width: $wdFlexieResponsiveWidthDesktop)
+        @media only screen and (min-width: $wdFlexerResponsiveWidthDesktop)
             @content
     @else if $scope == tablet
-        @media only screen and (min-width: $wdFlexieResponsiveWidthTablet)
+        @media only screen and (min-width: $wdFlexerResponsiveWidthTablet)
             @content
     @else if $scope == phablet
-        @media only screen and (min-width: $wdFlexieResponsiveWidthPhablet)
+        @media only screen and (min-width: $wdFlexerResponsiveWidthPhablet)
             @content
 
 =margins-and-paddings($scopeName)
@@ -43,16 +43,16 @@
         margin-left: auto
         margin-right: auto
     /// individual margins and paddings
-    @each $propertyKey, $propertyName in $wdFlexiePositioningProperties
-        @each $sideKey, $sideName in $wdFlexiePositioningIndividualSides
-            @each $valueKey, $value in $wdFlexiePositioningValues
+    @each $propertyKey, $propertyName in $wdFlexerPositioningProperties
+        @each $sideKey, $sideName in $wdFlexerPositioningIndividualSides
+            @each $valueKey, $value in $wdFlexerPositioningValues
                 @if $propertyName != 'padding' or $value >= 0
                     .#{$scopeName}#{$propertyKey}#{$sideKey}-#{$valueKey}
                         #{$propertyName}-#{$sideName}: #{$value}rem
     /// bilateral margins and paddings
-    @each $propertyKey, $propertyName in $wdFlexiePositioningProperties
-        @each $sideKey, $sideName1, $sideName2 in $wdFlexiePositioningBilateralSides
-            @each $valueKey, $value in $wdFlexiePositioningValues
+    @each $propertyKey, $propertyName in $wdFlexerPositioningProperties
+        @each $sideKey, $sideName1, $sideName2 in $wdFlexerPositioningBilateralSides
+            @each $valueKey, $value in $wdFlexerPositioningValues
                 @if $propertyName != 'padding' or $value >= 0
                     .#{$scopeName}#{$propertyKey}#{$sideKey}-#{$valueKey}
                         #{$propertyName}-#{$sideName1}: #{$value}rem

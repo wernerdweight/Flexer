@@ -3,11 +3,11 @@
 ///////////////////////////////////////////////////////////////////////////////////
 
 /// default margins and paddings (non-responsive)
-@if $wdFlexieUseIndentation == true
+@if $wdFlexerUseIndentation == true
 	+margins-and-paddings('')
 
 /// responsive margins and paddings
-@if $wdFlexieUseIndentationResponsive == true
-	@each $scope, $name in $wdFlexieScopes
+@if $wdFlexerUseIndentationResponsive == true
+	@each $scope, $name in $wdFlexerScopes
 		+responsive($scope)
 			+margins-and-paddings($name + '-')

@@ -1,7 +1,7 @@
 {
   "name": "flexer",
   "description": "An advanced flexbox-based grid system",
-  "main": "dev/sass/flexie.sass",
+  "main": "dev/sass/flexer.sass",
   "authors": [
     "Werner Dweight"
   ],
@@ -11,7 +11,7 @@
     "fexbox",
     "grid"
   ],
-  "homepage": "https://github.com/wernerdweight/Flexie",
+  "homepage": "https://github.com/wernerdweight/Flexer",
   "ignore": [
     "**/.*",
     "node_modules",
