@@ -16,7 +16,8 @@
             & > *
                 +column-width($wdFlexerTotalColumns/$i)
                 margin-bottom: 1rem
-                margin-left: $wdFlexerMarginColumn
+                &:nth-child(n)
+                    margin-left: $wdFlexerMarginColumn
                 &:nth-child(#{$i}n + 1)
                     margin-left: 0
             @if $wdFlexerUseGridNoMargin == true
