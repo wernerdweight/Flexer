@@ -1,6 +1,7 @@
 /// fluid width formula mixin
 =column-width($n,$m:$wdFlexerMarginColumn,$u:$wdFlexerUnit,$c:$wdFlexerTotalColumns)
     flex-basis: calc( (#{$n} * #{$u}) + (#{$n - 1} * #{$m}) - 0.01px )   /// 0.01px is a rounding workaround for MS Edge and IE
+    max-width: calc( (#{$n} * #{$u}) + (#{$n - 1} * #{$m}) - 0.01px )   /// this is a workaround for IE (which otherwise can't cope with paddings and borders)
 
 =baseColumn
     margin-left: $wdFlexerMarginColumn
